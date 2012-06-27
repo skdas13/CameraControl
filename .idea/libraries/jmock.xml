@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="jmock">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jmock/jmock-legacy-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock/objenesis-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock/hamcrest-core-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock/jmock-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock/cglib-2.1_3-src.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock/cglib-nodep-2.1_3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock/jmock-junit4-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock/bsh-core-2.0b4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock/hamcrest-library-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock/jmock-junit3-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jmock/jmock-script-2.5.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
