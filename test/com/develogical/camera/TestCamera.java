@@ -52,12 +52,13 @@ public class TestCamera {
 
     @Test
     public void pressingTheShutterWhenPowerIsOnCopiesDataFromSensorToMemoryCard() {
-        final byte [] data = new byte[] {};
+        final byte[] data = new byte[]{};
 
         powerOnCamera();
 
         context.checking(new Expectations() {{
-            oneOf(sensor).readData(); will(returnValue(data));
+            oneOf(sensor).readData();
+            will(returnValue(data));
             oneOf(memoryCard).write(with(same(data)));
         }});
 
@@ -66,12 +67,13 @@ public class TestCamera {
 
     @Test
     public void switchingCameraOffDoesNotPowerDownSensorIfCopyingToMemoryCard() {
-        final byte [] data = new byte[] {};
+        final byte[] data = new byte[]{};
 
         powerOnCamera();
 
         context.checking(new Expectations() {{
-            oneOf(sensor).readData(); will(returnValue(data));
+            oneOf(sensor).readData();
+            will(returnValue(data));
             oneOf(memoryCard).write(with(same(data)));
         }});
 
@@ -86,12 +88,13 @@ public class TestCamera {
 
     @Test
     public void switchingCameraOffPowersDownSensorIfCopyingToMemoryCardCompleted() {
-        final byte [] data = new byte[] {};
+        final byte[] data = new byte[]{};
 
         powerOnCamera();
 
         context.checking(new Expectations() {{
-            oneOf(sensor).readData(); will(returnValue(data));
+            oneOf(sensor).readData();
+            will(returnValue(data));
             oneOf(memoryCard).write(with(same(data)));
         }});
 

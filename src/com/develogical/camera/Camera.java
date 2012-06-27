@@ -2,8 +2,8 @@ package com.develogical.camera;
 
 public class Camera implements WriteListener {
 
-    private Sensor sensor;
-    private MemoryCard memoryCard;
+    private final Sensor sensor;
+    private final MemoryCard memoryCard;
 
     private volatile boolean isPowerOn = false;
     private volatile boolean isCopying = false;
@@ -15,15 +15,11 @@ public class Camera implements WriteListener {
     }
 
     public void pressShutter() {
-        if (isPowerOn()) {
+        if (isPowerOn) {
             isCopying = true; // will be reset to false by memoryCard calling writeComplete()
             byte[] data = sensor.readData();
             memoryCard.write(data);
         }
-    }
-
-    public boolean isPowerOn() {
-        return isPowerOn;
     }
 
     public void powerOn() {
@@ -32,13 +28,10 @@ public class Camera implements WriteListener {
     }
 
     public void powerOff() {
-        if (!isCopying)
-        {
+        if (!isCopying) {
             sensor.powerDown();
             isPowerOn = false;
-        }
-        else
-        {
+        } else {
             isPoweringOff = true;
         }
     }
